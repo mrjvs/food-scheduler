@@ -12,6 +12,7 @@ import * as userController from "./controllers/user";
 
 // setup imports
 
+const port: number = parseInt(process.env.WEBSERVER_PORT || "80", undefined);
 const app: express.Application = express();
 DB.init();
 app.use(cookieParser());

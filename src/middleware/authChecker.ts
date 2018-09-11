@@ -5,10 +5,10 @@ import bcrypt from "bcrypt";
 import generateSecretToken from "../utils/token";
 
 // TODO move to env vars
-const cookieNameToken: string = "af987jcf";
-const cookieNameId: string = "bsje89dj";
-const cookieName: string = "healthy-schedule";
-const secretTokenSecret: string = "Lorem ipsum";
+const cookieNameToken: string = process.env.AUTHERISATION_COOKIE_LOGIN_TOKEN_NAME  || "";
+const cookieNameId: string = process.env.AUTHERISATION_COOKIE_SESSIONID_NAME  || "";
+const cookieName: string = process.env.AUTHERISATION_COOKIE_NAME || "";
+const secretTokenSecret: string = process.env.AUTHERISATION_COOKIE_LOGIN_TOKEN_SECRET || "";
 
 function isLoggedIn(req: Request, res: Response, next: NextFunction): void {
 

@@ -4,10 +4,9 @@ import { Request, Response, NextFunction } from "express";
 import { User, IUser, getRandomString } from "../models/user";
 import HttpStatusCode from "../definitions/HttpStatusCodes";
 
-// TODO move to env vars
-const cookieNameToken: string = "af987jcf";
-const cookieNameId: string = "bsje89dj";
-const cookieName: string = "food-scheduler";
+const cookieNameToken: string = process.env.AUTHERISATION_COOKIE_LOGIN_TOKEN_NAME  || "";
+const cookieNameId: string = process.env.AUTHERISATION_COOKIE_SESSIONID_NAME  || "";
+const cookieName: string = process.env.AUTHERISATION_COOKIE_NAME || "";
 
 /* ****************************
  *  authentication opun login:

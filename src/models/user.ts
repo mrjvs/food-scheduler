@@ -3,8 +3,7 @@ import uniqueValidator from "mongoose-unique-validator";
 import bcrypt from "bcrypt";
 import crypto from "crypto";
 
-// TODO move to env vars
-const secretTokenSize = 24;
+const secretTokenSize: number = parseInt(process.env.SECRET_TOKEN_SIZE || "0", undefined);
 
 export interface IUserDocument extends Document {
     username: string;
