@@ -1,0 +1,49 @@
+{
+  "name": "food-scheduler",
+  "version": "1.0.0",
+  "description": "A typescript express webapp to help you with your daily food schedule",
+  "main": "main.js",
+  "dependencies": {
+    "@types/bcrypt": "^2.0.0",
+    "@types/body-parser": "^1.17.0",
+    "@types/cookie-parser": "^1.4.1",
+    "@types/dotenv": "^4.0.3",
+    "@types/es6-shim": "^0.31.37",
+    "@types/express": "^4.16.0",
+    "@types/express-handlebars": "0.0.30",
+    "@types/mongodb": "^3.1.4",
+    "@types/mongoose": "^5.2.11",
+    "@types/mongoose-unique-validator": "^1.0.1",
+    "@types/node": "^10.9.4",
+    "bcrypt": "^3.0.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "copyfiles": "^2.1.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "jest": "^23.5.0",
+    "mongoose": "^5.2.13",
+    "mongoose-unique-validator": "^2.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "tsc | copyfiles \"./src/views/*.hbs\" \"./src/views/**/*.hbs\" ./dist --up 1",
+    "run": "node ./dist/main.js",
+    "lint": "tslint --project tslint.json",
+    "test": "jest --config=jest-config.json",
+    "prod": "NODE_ENV=production node ./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrjvs/food-scheduler.git"
+  },
+  "author": "mrjvs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrjvs/food-scheduler/issues"
+  },
+  "homepage": "https://github.com/mrjvs/food-scheduler#readme"
+}
